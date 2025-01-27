@@ -32,7 +32,7 @@ public class CelularService {
 		public celularModel updateCelular(UUID id, celularModel celular) {
 			celularModel celularAtualizado =  repository.findById(id).get();;
 			celularAtualizado.setMarca(celular.getMarca());
-			celularAtualizado.setBateria(celular.getBateria());
+			celularAtualizado.setCapacidadeBateria(celular.getBateria());
 			celularAtualizado.setModelo(celular.getModelo());;
 			celularAtualizado.setTamanhoTela(celular.getTamanhoTela());
 			return repository.save(celular);

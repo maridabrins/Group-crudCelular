@@ -2,6 +2,8 @@ package com.celular.celular.model;
 
 import java.util.UUID;
 
+import com.celular.celular.celularDto;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +24,9 @@ public class celularModel {
 	private int bateria;
 	
 	
+	public celularModel(celularDto celular) {
+		// TODO Auto-generated constructor stub
+	}
 	public UUID getId() {
 		return id;
 	}
@@ -49,9 +54,10 @@ public class celularModel {
 	public int getBateria() {
 		return bateria;
 	}
-	public void setBateria(int bateria) {
-		this.bateria = bateria;
+	public void setCapacidadeBateria(Object object) {
+		this.bateria = (int) object;
 	}
+	
 	
 	
 
